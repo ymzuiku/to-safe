@@ -1,4 +1,4 @@
-# Safe Obj
+# to-safe
 
 > This package use Proxy in ES6, this feature is can't babel\polyfill to ES5, Please  Think twice!
 
