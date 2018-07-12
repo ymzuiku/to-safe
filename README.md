@@ -8,7 +8,7 @@
 $ npm install --save to-safe
 ```
 
-## painful in Javascript
+## Painful in Javascript
 ```
 var obj = {a:'bb'}
 var value;
