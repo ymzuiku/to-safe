@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install --save safe-obj
+$ npm install --save to-safe
 ```
 
 ## painful in Javascript
