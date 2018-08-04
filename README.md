@@ -1,4 +1,4 @@
-# Safe load JS sub object
+# Safe load JavaScript sub object
 
 # [中文文档](README-CN.md)
 
@@ -10,7 +10,7 @@
 $ npm install --save to-safe
 ```
 
-## Painful in Javascript
+## Painful in JavaScript
 ```
 var obj = {a:'bb'}
 
