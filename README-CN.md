@@ -67,7 +67,7 @@ console.log(dog.o);  // 返回 20
 
 看上去很神奇, 其实原理很简单: toSafe 把对象的子属性进行递归, 重写了get方法. 当我们取出新的子属性时, 又会把子子属性进行递归,重写get方法, 这样规避了JS的崩溃
 
-## 使用函数安全获取
+## 使用try函数安全获取
 
 如果要兼容低版本浏览器, 就无法使用Proxy特性, 
 此时使用函数读取,`toSafe`会用`try-catch`包裹该函数
@@ -76,7 +76,7 @@ console.log(dog.o);  // 返回 20
 var toSafe = require('to-safe')
 
 var obj = { a: 'bb'};
-var value = toSafe(()=>obj.a.b.c.d[2].e);
+var value = toSafe.try(()=>obj.a.b.c.d[2].e);
 console.log(value);  // {isNull: true}
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "to-safe",
-  "version": "1.0.4",
+  "version": "0.0.4",
   "description": "pillar",
   "main": "src/index.js",
   "scripts": {
