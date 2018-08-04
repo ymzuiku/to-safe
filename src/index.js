@@ -25,4 +25,37 @@ function toSafe(obj, undefinedKey = 'isNull', isUndefined, lastKey) {
   });
 }
 
+console.time('default');
+var node = {
+  foo: {
+    name: 'foo',
+    age: 20,
+    data: [
+      299,
+      'bbb',
+      13,
+      {
+        subName: 'subName',
+        subAge: 15,
+      },
+    ],
+  },
+  dog: [
+    299,
+    'bbb',
+    13,
+    {
+      subName: 'subName',
+      subAge: 15,
+    },
+  ],
+  cat: 'aaaa',
+};
+var data;
+for (let i = 0; i < 5; i++) {
+  data = data['sub' + i] = node;
+}
+console.log(data);
+console.timeEnd('default');
+
 module.exports = toSafe;
