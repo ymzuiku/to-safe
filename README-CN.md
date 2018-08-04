@@ -6,7 +6,7 @@
 ```
 var obj = {a:'bb'}
 
-// 如果我们直接获取 obj.a.b.c, js会崩溃, 因为没有该对象
+// 如果我们直接获取 obj.a.b.c, js会崩溃, 因为我们尝试获取了一个 `undefined` 对象的子对象
 // 当我们不确定对象是否有子属性时, 得逐步判断, 或者放进 try-catch 中
 
 if(obj.a && obj.a.b && obj.a.b[2] && obj.a.b[2].c) {
