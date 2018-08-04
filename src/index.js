@@ -9,6 +9,12 @@ function toSafe(obj, undefinedKey = 'isNull', isUndefined) {
   if (isUndefined) {
     obj = { [undefinedKey]: true };
   }
+  if (!Proxy) {
+    console.error(
+      '[error] to-safe: Your brower no have Proxy feature, Please use Function param',
+    );
+    throw '[error] to-safe: Your brower no have Proxy feature, Please use Function param';
+  }
   return new Proxy(obj, {
     get: function(target, key) {
       var value = Reflect.get(target, key);
@@ -21,7 +27,7 @@ function toSafe(obj, undefinedKey = 'isNull', isUndefined) {
         return toSafe(target, undefinedKey, true);
       }
       return value;
-    }
+    },
   });
 }
 

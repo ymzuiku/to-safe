@@ -1,4 +1,6 @@
-# to-safe
+# Safe load JS sub object
+
+# [中文文档](README-CN.md)
 
 > This package use Proxy in ES6, this feature is can't babel\polyfill to ES5, Please  Think twice!
 
@@ -11,11 +13,10 @@ $ npm install --save to-safe
 ## Painful in Javascript
 ```
 var obj = {a:'bb'}
-var value;
 
 // if you get obj.a.b[2].c, is Error
 if(obj.a && obj.a.b && obj.a.b[2] && obj.a.b[2].c) {
-  value = obj.a.b[2].c;
+  console.log(obj.a.b[2].c);
 }
 
 ```
